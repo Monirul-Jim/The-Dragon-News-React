@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 const LeftSideNav = () => {
     const [categories,setCategories]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/category')
+        fetch('http://localhost:5000/categories')
         .then(res=>res.json())
         .then(data=>setCategories(data))
     },[])
     return (
         <div>
             <h1>All Category</h1>
-            <div className='text-decoration-none'>
+            <div>
                 {
-                    categories.map(category=><p key={category.id}>
-                        <Link to={`/category/${category.id}`}>{category.name}</Link>
+                    categories.map(category=><p  key={category.id}>
+                        <Link  className='text-decoration-none text-black text-secondary ' to={`/category/${category.id}`}>{category.name}</Link>
 
                     </p>)
                 }
