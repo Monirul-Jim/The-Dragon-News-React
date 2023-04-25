@@ -26,23 +26,22 @@ const NewsCard = ({ news }) => {
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Img variant="top" src={image_url} />
-            <Card.Text>
-              <p className='text-secondary mt-2'>{details.length < 250 ? <>{details}</> :
-                <>{details.slice(0, 250)}... <br />
-                  <Link to={`/news/${_id}`} className='text-decoration-none text-danger'>Read More</Link>
-                </>
-              }</p>
+            <Card.Text className='text-secondary mt-2'>{details.length < 250 ? <>{details}</> :
+                  <>{details.slice(0, 250)}... <br />
+                    <Link to={`/news/${_id}`} className='text-decoration-none text-danger'>Read More</Link>
+                  </>
+                }
             </Card.Text>
-             </Card.Body>
+          </Card.Body>
           <Card.Footer className="text-muted d-flex align-items-center">
             <div className='flex-grow-1'>
               <Rating
                 placeholderRating={rating.number}
                 emptySymbol={<FaRegStar className='text-warning'></FaRegStar>}
                 placeholderSymbol={<FaStar className='text-warning' />}
-                fullSymbol={<FaStar className='text-warning'/>}
+                fullSymbol={<FaStar className='text-warning' />}
               ></Rating>
-               <span>{rating?.number}</span>
+              <span>{rating?.number}</span>
             </div>
             <div>
               <FaEye></FaEye> {total_view}

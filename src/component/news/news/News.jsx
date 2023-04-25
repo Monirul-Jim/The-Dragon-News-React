@@ -5,8 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const News = () => {
     const news=useLoaderData()
-    const { _id, title,image_url, details,category_id } = news
-    console.log(news);
+    const { _id, title,image_url, details,category_id } = news;
     return (
         <div>
             <Card >

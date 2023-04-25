@@ -1,15 +1,17 @@
 import React from 'react';
 import Header from '../pages/shared/Header/Header';
 import Footer from '../pages/shared/footer/Footer';
-import { Button, Col, Container, ListGroup, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import RightSideNav from '../pages/rightsidenav/RightSideNav';
 import LeftSideNav from '../pages/leftsidenav/LeftSideNav';
 import { Outlet } from 'react-router-dom';
+import NavigationBar from '../pages/shared/navigationBar/NavigationBar';
 
 const Main = () => {
     return (
         <Container>
             <Header></Header>
+            <NavigationBar></NavigationBar>
 
             <Container>
                 <Row>
